@@ -2,15 +2,15 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-
+import { FormsModule } from '@angular/forms';
+import { AppHeader } from './components/header/header.component';
+import { TodoList } from './components/todo/todo-list.component';
+import { TodoItem } from './components/todo/todo-item/todo-item.component';
+import { AppFooter } from './components/footer/footer.component';
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+  declarations: [AppComponent, AppHeader, TodoList, TodoItem, AppFooter],
+  imports: [BrowserModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
