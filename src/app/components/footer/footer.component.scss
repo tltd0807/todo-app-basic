@@ -1,0 +1,26 @@
+footer{
+    font-family: inherit;
+    color: hsl(233, 14%, 35%);
+
+    .footer-container{
+        max-width: 350px;
+        background-color: hsl(235, 24%, 19%);
+        margin: 15px auto;
+        border-radius: 7px;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        justify-content: center;
+        gap: 15px;
+        p:hover{
+            cursor: pointer;
+            color: hsl(233, 11%, 84%)
+        }
+        // Active thì color:hsl(220, 98%, 61%) ;
+        
+    }
+    .footer-desc{
+        width: fit-content;
+        margin: 50px auto;
+    }
+}

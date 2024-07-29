@@ -1,0 +1,43 @@
+.list-container{
+    max-width: 350px;
+    border-radius: 7px;
+    overflow: hidden;
+    margin: auto;
+
+    span{
+        display: block;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid hsl(233, 14%, 35%);
+    }
+
+    .list-footer{
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 16px;
+        color: hsl(233, 14%, 35%);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 350px;
+        background-color: hsl(235, 24%, 19%);
+        padding: 15px 15px;
+        margin: 0px;
+        p{
+            margin: 0;
+        }
+        .clear-btn{
+            font-family: inherit;
+            font-size: inherit;
+            margin: 0;
+            padding: 0;
+            color: inherit;
+            outline: none;
+            border: none;
+            background-color: inherit;
+            &:hover{
+                color: hsl(220, 98%, 61%);
+                cursor: pointer;
+            }
+        }
+    }
+}

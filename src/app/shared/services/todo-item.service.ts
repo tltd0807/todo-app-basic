@@ -9,6 +9,8 @@ export class TodoItemService {
     { id: '1', title: 'Do morning exercise', status: true },
     { id: '2', title: 'Do homework', status: false },
     { id: '3', title: 'Go sleep early', status: false },
+    { id: '4', title: 'Read book 20 minutes', status: false },
+    { id: '5', title: 'Drink 2 liters water', status: false },
   ];
   constructor() {}
 
@@ -19,9 +21,11 @@ export class TodoItemService {
   public addTodoItem(item: TodoItem) {
     this.todoItems.push(item);
   }
+
   public removeTodoItem(id: string) {
     this.todoItems = this.todoItems.filter((item) => item.id != id);
   }
+
   public removeCompleted() {
     this.todoItems = this.todoItems.filter((item) => item.status);
   }
