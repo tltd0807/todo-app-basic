@@ -1,10 +1,12 @@
 <div class="list-container">
-  <ng-container *ngFor="let i of [0, 1, 2, 3, 4, 5]">
-    <todo-item></todo-item>
+  <!-- <ng-template *ngIf="todoItems.length > 0"> nó làm lỗi k render ra, check nha -->
+  <ng-container *ngFor="let item of todoItems">
+    <todo-item [item]="item"></todo-item>
     <span></span>
   </ng-container>
   <div class="list-footer">
-    <p>5 items left</p>
+    <p>{{ todoItems.length }} items left</p>
     <button class="clear-btn">Clear Completed</button>
   </div>
+  <!-- </ng-template> -->
 </div>

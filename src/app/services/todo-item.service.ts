@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { TodoItem } from '../data/todo-item-model';
+import { ITodoItem } from '../shared/data/todo-item-model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TodoItemService {
-  private todoItems: TodoItem[] = [
+  private todoItems: ITodoItem[] = [
     { id: '1', title: 'Do morning exercise', status: true },
     { id: '2', title: 'Do homework', status: false },
     { id: '3', title: 'Go sleep early', status: false },
@@ -14,11 +14,15 @@ export class TodoItemService {
   ];
   constructor() {}
 
-  get todoList() {
-    return this.todoItems;
+  // get todoList() {
+  //   return [...this.todoItems]; //Trả về kiểu này để thay đổi tham chiếu
+  // }
+
+  getTodoItems(): ITodoItem[] {
+    return [...this.todoItems]; // Trả về một bản sao của mảng để thay đổi tham chiếu
   }
 
-  public addTodoItem(item: TodoItem) {
+  public addTodoItem(item: ITodoItem) {
     this.todoItems.push(item);
   }
 
